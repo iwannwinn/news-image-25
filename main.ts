@@ -241,8 +241,10 @@ for (let i = 0; i < STORIES.length; i++) {
     drawText(line, MX, by, 2, INK);
     by += 22;
   }
-  sy += 108;
-  if (i < STORIES.length - 1) rect(MX, sy - 12, CW, 1, RULE);
+  if (i < STORIES.length - 1) {
+    rect(MX, by + 10, CW, 1, RULE);
+    sy = by + 24;
+  }
 }
 
 // Bottom: markets strip + footer
